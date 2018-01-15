@@ -113,20 +113,20 @@ export class RxjsOperatorComponent implements OnInit {
     // Results in the following:
     // 10 20 30
 
-    // Convert an infinite iterable (from a generator) to an Observable
-    function* generateDoubles(seed) {
-      let i = seed;
-      while (true) {
-        yield i;
-        i = 2 * i; // double it
-      }
-    }
+    // // Convert an infinite iterable (from a generator) to an Observable
+    // function* generateDoubles(seed) {
+    //   let i = seed;
+    //   while (true) {
+    //     yield i;
+    //     i = 2 * i; // double it
+    //   }
+    // }
 
-    const iterator = generateDoubles(3);
-    const result2 = Rx.Observable.from(iterator).take(10);
-    result2.subscribe(x => console.log(x));
-    // Results in the following:
-    // 3 6 12 24 48 96 192 384 768 1536
+    // const iterator = generateDoubles(3);
+    // const result2 = Rx.Observable.from(iterator).take(10);
+    // result2.subscribe(x => console.log(x));
+    // // Results in the following:
+    // // 3 6 12 24 48 96 192 384 768 1536
   }
 
   fromEvent() {
